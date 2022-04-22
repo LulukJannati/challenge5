@@ -1,0 +1,23 @@
+<div>
+    <a href="/cars/add" type="button">Add cars</a>
+    <% data.forEach(result => { %>
+        <div class="content">
+            <p>
+                <%= result.nama %>
+            </p>
+            <p>
+                <%= result.sewa %>
+            </p>
+            <p>
+                <%= result.ukuran %>
+            </p>
+            <p>
+                <img src="<%= result.foto %>" width="150" height="150" />
+            </p>
+        </div>
+        <div>
+            <a type="button" href="/cars/update/<%= result.id %>">Edit</a>
+        </div>
+
+        <% }) %>
+</div>
